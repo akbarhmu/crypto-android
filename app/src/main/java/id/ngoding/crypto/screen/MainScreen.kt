@@ -44,7 +44,8 @@ fun MainScreen(
         ) {
             CircularProgressIndicator(
                 trackColor = if (isSystemInDarkTheme()) Color.White.copy(alpha = 0.1f)
-                else Color.Black.copy(alpha = 0.1f)
+                else Color.Black.copy(alpha = 0.1f),
+                progress = 0.1f, // TODO: Remove after new release of compose bom
             )
         }
     } else if (apiKeysReady.isSuccess()) {
